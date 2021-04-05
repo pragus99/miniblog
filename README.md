@@ -19,3 +19,6 @@ yarn build
 ## JSON file
 
 File json is included in data folder. if you don't want install json-server then you can change URL from fetch to endpoint/API from internet.
+
+## Website
+https://elated-kirch-deca81.netlify.app/
