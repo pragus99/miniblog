@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>The Blog</h1>
       <div className="links">
-        <a href="/">Home</a>
-        <a
-          href="/create"
+        {/* Link is anchor but it's function from react-router-dom and not request to server */}
+        <Link to="/">Home</Link>
+        <Link
+          to="/create"
           //  Jika ingin menggunakan inline css dengan javascript object
           // style={{
           //   color: "White",
@@ -14,7 +17,7 @@ const Navbar = () => {
           // }}
         >
           New Blog
-        </a>
+        </Link>
       </div>
     </nav>
   );
