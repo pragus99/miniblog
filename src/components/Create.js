@@ -51,10 +51,17 @@ const Create = () => {
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
         <label>Blog author:</label>
-        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="Prayogo">Prayogo</option>
+        <select
+          required
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        >
+          <option value="" disabled>
+            Select author
+          </option>
           <option value="Bagus">Bagus</option>
           <option value="Suntoro">Suntoro</option>
+          <option value="Prayogo">Prayogo</option>
         </select>
         {!isPending && <button>Create Blog</button>}
         {/* if isPending true, loading adding blog */}
