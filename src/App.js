@@ -11,6 +11,7 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="content">
+          {/* one route, one time */}
           <Switch>
             <Route exact path="/">
               <Home />
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/blogs/:id">
               <BlogDetails />
             </Route>
+            {/* if user go to "nothing to be found" page */}
             <Route path="*">
               <NotFound />
             </Route>

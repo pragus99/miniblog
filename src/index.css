@@ -47,7 +47,7 @@
 
 .blog-preview h2 {
   font-size: 20px;
-  color: red;
+  color: green;
   margin-bottom: 8px;
 }
 
@@ -58,12 +58,21 @@
 /* blog detail */
 .blog-details h2 {
   font-size: 20px;
-  color: red;
+  color: green;
   margin-bottom: 10px;
 }
 
 .blog-details div {
   margin: 20px 0;
+}
+
+.blog-details button {
+  background: red;
+  color: white;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* create */
@@ -102,4 +111,20 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* 404 */
+
+.not-found h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.not-found p {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+
+.not-found a {
+  color: green;
 }

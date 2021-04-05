@@ -2,16 +2,19 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const Create = () => {
+  //
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("");
+  // it's set to false to prevent loading adding blog.. before submit form
   const [isPending, setIsPending] = useState(false);
+  // redirect
   const history = useHistory();
 
   const handleSubmit = (e) => {
     //prevent refresh page
     e.preventDefault();
-
+    //loading adding blog...
     setIsPending(true);
 
     const blog = { title, body, author };
@@ -20,7 +23,9 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
     }).then(() => {
+      //when adding blog completed
       setIsPending(false);
+      //to homepage
       history.push("/");
     });
   };
@@ -34,6 +39,7 @@ const Create = () => {
           type="text"
           required
           value={title}
+          // Update title state every time when you input something and match what you type
           onChange={(e) => setTitle(e.target.value)}
         />
         <label>Blog body</label>
@@ -51,6 +57,7 @@ const Create = () => {
           <option value="Suntoro">Suntoro</option>
         </select>
         {!isPending && <button>Create Blog</button>}
+        {/* if isPending true, loading adding blog */}
         {isPending && <button disabled>adding blog...</button>}
       </form>
     </div>
