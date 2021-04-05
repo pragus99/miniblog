@@ -62,8 +62,10 @@
   margin-bottom: 10px;
 }
 
+/* prevent text flowing out */
 .blog-details div {
   margin: 20px 0;
+  word-wrap: break-word;
 }
 
 .blog-details button {
