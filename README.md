@@ -22,4 +22,4 @@ File json is included in data folder. if you don't want install json-server then
 
 ## Website
 
-https://brave-jackson-bc1c69.netlify.app/
+https://brave-jackson-bc1c69.netlify.app/ - Everyday API endpoint offline from time 00.00 - 06.00 (GMT) so you can't make new blog or delete blog.
