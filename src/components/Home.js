@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 const Home = () => {
   // call useFetch components and after call that BlogList components for iteration array of blog if nothing wrong
   const { data: blogs, isPending, error } = useFetch(
-    "http://localhost:8000/blogs"
+    "https://json-blog.herokuapp.com/blogs"
   );
 
   return (

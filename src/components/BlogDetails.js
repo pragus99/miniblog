@@ -6,14 +6,14 @@ const BlogDetails = () => {
   const { id } = useParams();
   // load blog with current id
   const { data, isPending, error } = useFetch(
-    "http://localhost:8000/blogs/" + id
+    "https://json-blog.herokuapp.com/blogs/" + id
   );
   // function for redirect
   const history = useHistory();
 
   const handleClick = () => {
     // delete blog with current id
-    fetch("http://localhost:8000/blogs/" + data.id, {
+    fetch("https://json-blog.herokuapp.com/blogs/" + data.id, {
       method: "DELETE",
     }).then(() => {
       // redirect to homepage after delete blog
